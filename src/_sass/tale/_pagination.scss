@@ -1,0 +1,81 @@
+.pagination {
+  border-top: .5px solid $grey-2;
+  font-family: $serif-secondary;
+  padding-top: 2rem;
+  position: relative;
+  //text-align: center;
+
+  span {
+    color: $default-shade;
+    font-size: 1.1rem;
+  }
+
+  .top {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    font-family: $sans-serif;
+    font-size: 1.1rem;
+    opacity: .6;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+
+    a {
+      color: $default-color;
+    }
+  }
+  
+  .left {
+    left: 0;
+    text-align: left;
+  }
+
+  .left::before {
+    content: "← "
+  }
+
+  .right {
+    right: 0;
+    text-align: right;
+  }
+
+  .right::after {
+    content: " →"
+  }
+  .one_arrow {
+    @include transition(all .3s ease-out);
+    color: $default-color;
+    &:hover,
+    &:focus {
+      opacity: .6;
+      text-decoration: none;
+    }
+  }
+
+  .end_left {
+    left: 0;
+    text-align: left;
+  }
+
+  .end_right {
+    right: 0;
+    text-align: right;
+  }
+
+  .end_left::before {
+    content: " ⇤ ";
+    font-size: 130%;
+    opacity: .7;
+  }
+
+  .end_right::after {
+    content: " ⇥";
+    font-size: 130%;
+    opacity: .7;
+  }
+}

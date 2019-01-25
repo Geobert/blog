@@ -1,0 +1,26 @@
+source: src
+default:
+  excerpt_separator: "\n\n\n"
+  is_draft: true
+site:
+  title: Geob-o-Matic
+  description: Faire réfléchir la machine qui est en moi
+  base_url: https://haurchefant.fr 
+  data:
+    author: Geobert Quach
+    copyright: 2019
+pages:
+  default:
+    layout: default.liquid
+    permalink: /{{parent}}/{{name}}/      
+posts:
+  rss: rss.xml
+  dir: posts
+  drafts_dir: drafts
+  default:
+    published_date: "2020-06-27 01:03:26 +0000"
+    permalink: /posts/{{year}}/{{month}}/{{slug}}/
+    layout: post.liquid
+syntax_highlight:
+  theme: "base16-eighties.dark"
+  

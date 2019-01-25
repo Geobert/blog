@@ -1,0 +1,30 @@
+// Colors
+$background-color: #1e1e1e;
+$default-color: #d8d8d8;
+$default-shade: #cbced4;
+$default-tint: #979797;
+$grey-1: #afafaf;
+$grey-2: #e5e5e5;
+$grey-3: #2d2d2d;
+$white: #fff;
+$shadow-color: rgba(255, 255, 255, 0.3);
+$highlight: #ffee00;
+$code-color: $highlight;
+
+// Fonts
+$serif-primary: 'Inconsolata', serif;
+$serif-secondary: 'Inconsolata', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+$sans-serif: 'Inconsolata', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$monospaced: Menlo, Monaco, monospace;
+
+@mixin box-sizing($type: border-box) {
+  -webkit-box-sizing: $type;
+     -moz-box-sizing: $type;
+          box-sizing: $type;
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+     -moz-transition: $args;
+          transition: $args;
+}
