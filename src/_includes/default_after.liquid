@@ -8,12 +8,18 @@
   </span></p>
   <span>
     &copy; {{ site.data.copyright }} {{ site.data.author }}. 
-    {% if paginator.total_pages %}
-    {{ paginator.total_pages }} articles propulsés par
-    <a href="http://cobalt-org.github.io/">Cobalt</a>.
+    {% if paginator %}
+      {% if paginator.total_pages > 1 %}
+        {{ paginator.total_pages }} articles propulsés par        
+      {% elsif paginator.total_pages == 1 %}
+        {{ paginator.total_pages }} article propulsé par
+      {% else %}
+        Propulsé par  
+      {% endif %}
     {% else %}
-    Propulsé par <a href="http://cobalt-org.github.io/">Cobalt</a>. 
+      Propulsé par
     {% endif %}
+    <a href="http://cobalt-org.github.io/">Cobalt</a>.
   </span>
 </footer>
 </body>

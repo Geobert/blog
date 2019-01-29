@@ -43,3 +43,13 @@
     text-align: justify;
   }
 }
+
+.site-tag a {
+  display: inline-block;
+  margin-right: 12px;
+  color: $default-color;
+}
+
+.tag {
+  color: $default-color;
+}

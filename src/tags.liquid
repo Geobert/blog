@@ -1,0 +1,55 @@
+---
+permalink: /tags.html
+published_date: "2019-01-29 21:57:48 +0000"
+layout: default.liquid
+is_draft: false
+pagination:
+  include: Tags
+  per_page: 20
+---
+{% if paginator.indexes %}
+<h1>Tags</h1>
+<p style="margin-top: 2em;">
+  {% for ptag in paginator.indexes %}
+  <span class="site-tag">
+  <a href="/{{ ptag.index_permalink }}/" style="font-size: {{ ptag.total_pages | times: 4 | plus: 80 }}%">{{ ptag.index_title }} ({{ ptag.total_pages }})</a>
+</span>
+    {% endfor %}
+  </p>
+{% else %}
+<h1>Tag: {{ paginator.index_title }}</h1>
+<ul>
+  {% for page in paginator.pages %}
+  <li><a href="/{{ page.permalink }}">{{ page.title }}</a> (<time datetime="{% include date_fr.liquid %}" class="catalogue-time">{%include date_fr.liquid%}</time>)
+    {% endfor %}
+</ul>
+<div class="pagination">
+  {% if paginator.previous_index %}
+  <span class="left arrow">
+    <a class="one_arrow" href="/{{ paginator.previous_index_permalink }}">Page précèdente</a>
+  </span>
+  {% endif %}
+  {% if paginator.next_index %}
+  <span class="right arrow">
+    <a class="one_arrow" href="/{{ paginator.next_index_permalink }}">Page suivante</a>
+  </span>
+  {% endif %}
+
+  <div style="width: 100%; text-align: center;">{{ paginator.index }} / {{ paginator.total_indexes }}</div>
+  <div>
+    {% if paginator.previous_index %}
+    <span class="end_left arrow one_arrow">
+      <a style="font-size: 75%; vertical-align: 15%;" href="/{{ paginator.first_index_permalink }}">Première
+        page</a>
+    </span>
+    {% endif %}
+    {% if paginator.next_index %}
+    <span class="end_right arrow one_arrow">
+      <a style="font-size: 75%; vertical-align: 15%;" href="/{{ paginator.last_index_permalink }}">
+        Dernière page</a>
+    </span>
+    {% endif %}
+
+  </div>
+</div>
+{% endif %}
