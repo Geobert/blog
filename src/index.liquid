@@ -24,35 +24,5 @@ pagination:
   </div>
   {% endfor %}
 </div>
-<div class="pagination">
-  {% if paginator.previous_index %}
-    <span class="left arrow">
-      <a class="one_arrow"
-       href="/{{ paginator.previous_index_permalink }}">Page précédente</a>
-    </span>
-  {% endif %}
-  {% if paginator.next_index %}
-    <span class="right arrow">
-      <a class="one_arrow" 
-      href="/{{ paginator.next_index_permalink }}">Page suivante</a>
-    </span>
-  {% endif %}
-
-  <div style="width: 100%; text-align: center;">{{ paginator.index }} / {{ paginator.total_indexes }}</div>
-  <div>
-      {% if paginator.previous_index %}
-      <span class="end_left arrow one_arrow">
-        <a style="font-size: 75%; vertical-align: 15%;" 
-          href="/{{ paginator.first_index_permalink }}">Première page</a>
-      </span>
-    {% endif %}
-    {% if paginator.next_index %}
-      <span class="end_right arrow one_arrow">
-        <a style="font-size: 75%; vertical-align: 15%;" 
-        href="/{{ paginator.last_index_permalink }}">
-        Dernière page</a>
-      </span>
-    {% endif %}
-  
-  </div>
+{% include nav_pagination.liquid %}
 </div>

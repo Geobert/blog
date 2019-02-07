@@ -8,7 +8,7 @@ pagination:
   per_page: 20
 ---
 {% if paginator.indexes %}
-<h1>Tags</h1>
+  <h1>Tags</h1>
 <p style="margin-top: 2em;">
   {% for ptag in paginator.indexes %}
   <span class="site-tag">
@@ -20,36 +20,12 @@ pagination:
 <h1>Tag: {{ paginator.index_title }}</h1>
 <ul>
   {% for page in paginator.pages %}
-  <li><a href="/{{ page.permalink }}">{{ page.title }}</a> (<time datetime="{% include date_fr.liquid %}" class="catalogue-time">{%include date_fr.liquid%}</time>)
+  {% capture date_fr_raw %}{% include date_fr.liquid %}{% endcapture %}
+  {% assign date_fr = date_fr_raw | strip %}
+  <li><a href="/{{ page.permalink }}">{{ page.title }}</a> — <time datetime="{{ date_fr }}"
+  class="catalogue-time">{{ date_fr }}</time>
     {% endfor %}
 </ul>
-<div class="pagination">
-  {% if paginator.previous_index %}
-  <span class="left arrow">
-    <a class="one_arrow" href="/{{ paginator.previous_index_permalink }}">Page précèdente</a>
-  </span>
-  {% endif %}
-  {% if paginator.next_index %}
-  <span class="right arrow">
-    <a class="one_arrow" href="/{{ paginator.next_index_permalink }}">Page suivante</a>
-  </span>
-  {% endif %}
-
-  <div style="width: 100%; text-align: center;">{{ paginator.index }} / {{ paginator.total_indexes }}</div>
-  <div>
-    {% if paginator.previous_index %}
-    <span class="end_left arrow one_arrow">
-      <a style="font-size: 75%; vertical-align: 15%;" href="/{{ paginator.first_index_permalink }}">Première
-        page</a>
-    </span>
-    {% endif %}
-    {% if paginator.next_index %}
-    <span class="end_right arrow one_arrow">
-      <a style="font-size: 75%; vertical-align: 15%;" href="/{{ paginator.last_index_permalink }}">
-        Dernière page</a>
-    </span>
-    {% endif %}
-
-  </div>
+{% include nav_pagination.liquid %}
 </div>
 {% endif %}
