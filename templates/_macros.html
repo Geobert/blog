@@ -1,0 +1,42 @@
+{% macro date_fr(date) %}
+{% if date %}
+{% set d = date | date(format="%u") %}    
+{% if d == '1' %}Lundi
+{% elif d == '2' %}Mardi
+{% elif d == '3' %}Mercredi
+{% elif d == '4' %}Jeudi
+{% elif d == '5' %}Vendredi
+{% elif d == '6' %}Samedi
+{% else %}Dimanche
+{% endif %}
+{{ date | date(format="%d") }}
+{% set m = date | date(format="%-m") %}
+{% if m == '1' %}janvier
+{% elif m == '2' %}février
+{% elif m == '3' %}mars
+{% elif m == '4' %}avril
+{% elif m == '5' %}mai
+{% elif m == '6' %}juin
+{% elif m == '7' %}juillet
+{% elif m == '8' %}août
+{% elif m == '9' %}septembre
+{% elif m == '10' %}octobre
+{% elif m == '11' %}novembre
+{% else %}décembre
+{% endif %}
+{{ date | date(format="%Y") }}
+{% endif %}
+{% endmacro date_fr %}
+
+{% macro print_tags(page) %}
+{% for tag in page.taxonomies["tags"] %}
+<a href="/tags/{{ tag | slugify }}" class="tag">{{ tag }}</a>{% if loop.index != loop.last %}, {% endif %}
+{% endfor %}
+{% endmacro print_tags %}
+
+{% macro reading_time(time) %}
+{% if time == 0 %}≤ 1 min
+{% elif time == 1 %}≈ 2 min
+{% else %}{{ time }} min
+{% endif %}
+{% endmacro reading_time %}

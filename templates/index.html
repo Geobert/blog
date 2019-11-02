@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="catalogue">
+  {% for page in paginator.pages %}
+  <div class="catalogue-item">
+    <a href="{{ page.permalink }}" class="fill-div"></a>
+    {% if page.date %}
+    <time datetime="{{ macros::date_fr(date=page.date) }}" class="catalogue-time">{{ macros::date_fr(date=page.date) }}</time>
+    {% endif %}
+    <h1 class="catalogue-title">{{ page.title | safe }}</h1>
+    <div class="catalogue-line"></div>
+
+    <p>
+      {% if page.summary %}
+      {{ page.summary | striptags | safe }}
+      {% elif page.extra.excerpt %}
+      {{ page.extra.excerpt | striptags | safe }}
+      {% else %}
+      {{ page.content | striptags | truncate(length=300) | safe }}
+      {% endif %}
+    </p>
+
+    <span class="fas fa-clock eta"></span>{{ macros::reading_time(time=page.reading_time) }}
+    {% if page.taxonomies["tags"] %}<span class="fa fa-tags" style="margin-left: 8px;"></span>{{ macros::print_tags(page=page) }}{% endif %}
+  </div>
+  {% endfor %}
+</div>
+{% include "nav_pagination.html" %}
+</div>
+{% endblock content %}

@@ -1,0 +1,4 @@
+drafts_creation_dir = "content/_drafts/wip/"
+drafts_consumption_dir = "content/_drafts/" 
+drafts_year_shift = 50
+publish_dest = "content/posts/"
