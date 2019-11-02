@@ -16,7 +16,7 @@ $code-color: $grey-4;
 $serif-primary: 'PT Serif', serif;
 $serif-secondary: 'PT Serif', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
 $sans-serif: 'Inconsolata', 'Segoe UI', Helvetica, Arial, sans-serif;
-$monospaced: 'Cascadia Code', Menlo, Monaco, monospace;
+$monospaced: Consolas, Menlo, Monaco, monospace;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;
