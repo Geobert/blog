@@ -12,9 +12,9 @@ $highlight: #ffee00;
 $code-color: $highlight;
 
 // Fonts
-$serif-primary: 'Inconsolata', serif;
-$serif-secondary: 'Inconsolata', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
-$sans-serif: 'Inconsolata', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+$serif-primary: 'PT Serif', serif;
+$serif-secondary: 'PT Serif', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
+$sans-serif: 'Inconsolata', 'Segoe UI', Helvetica, Arial, sans-serif;
 $monospaced: Menlo, Monaco, monospace;
 
 @mixin box-sizing($type: border-box) {

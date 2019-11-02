@@ -21,6 +21,10 @@ html {
   }
 }
 
+.date, .tag {
+  font-family: $sans-serif; 
+}
+
 body {
   border-color: $highlight;
   border-bottom-width: 4px;

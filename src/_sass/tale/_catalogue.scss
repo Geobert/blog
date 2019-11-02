@@ -1,4 +1,5 @@
 .catalogue {
+  font-family: $sans-serif;
   &-item {
     position: relative;
     border-bottom: 1px solid $grey-2;
@@ -19,7 +20,7 @@
 
   &-time {
     color: $default-tint;
-    font-family: $serif-secondary;
+    font-family: $sans-serif;
     letter-spacing: .5px;
   }
 
@@ -40,7 +41,7 @@
   }
 
   p {
-    text-align: justify;
+    font-family: $serif-primary;
   }
 }
 
@@ -48,7 +49,12 @@
   display: inline-block;
   margin-right: 12px;
   color: $default-color;
+  font-family: $sans-serif;
 }
+
+.site-tag a:hover {
+    text-decoration: underline;
+  }
 
 .tag {
   color: $default-color;
