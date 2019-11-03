@@ -6,6 +6,10 @@ code {
   font-family: $monospaced;  
 }
 
+a code {
+  color: $highlight !important;
+}
+
 code {
   border-radius: 3px;
   font-size: 95%;
