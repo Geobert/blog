@@ -18,10 +18,10 @@
 </div>
 <div class="pagination">
 {% if page.earlier %}
-   <a class="arrow left one_arrow" style="max-width: 45%; left: 0px !important;" href="/{{page.earlier.permalink}}">{{page.earlier.title}}</a>
+   <a class="arrow left one_arrow" style="max-width: 45%; left: 0px !important;" href="{{page.earlier.permalink}}">{{page.earlier.title}}</a>
  {% endif %}
  {% if page.later %}
-   <a class="arrow right one_arrow" style="max-width: 45%;" href="/{{page.later.permalink}}">{{page.later.title}}</a>
+   <a class="arrow right one_arrow" style="max-width: 45%;" href="{{page.later.permalink}}">{{page.later.title}}</a>
 {% endif %}
 </div>
 {% endblock content %}

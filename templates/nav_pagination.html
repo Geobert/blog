@@ -2,13 +2,13 @@
     {% if paginator.previous %}
       <span class="left arrow">
         <a class="one_arrow"
-         href="/{{ paginator.previous }}">Page précédente</a>
+         href="{{ paginator.previous }}">Page précédente</a>
       </span>
     {% endif %}
     {% if paginator.next %}
       <span class="right arrow">
         <a class="one_arrow" 
-        href="/{{ paginator.next }}">Page suivante</a>
+        href="{{ paginator.next }}">Page suivante</a>
       </span>
     {% endif %}
   
@@ -17,13 +17,13 @@
       {% if paginator.previous %}
         <span class="end_left arrow one_arrow">
           <a style="font-size: 75%; vertical-align: 15%;" 
-            href="/{{ paginator.first }}">Première page</a>
+            href="{{ paginator.first }}">Première page</a>
         </span>
       {% endif %}
       {% if paginator.next %}
         <span class="end_right arrow one_arrow">
           <a style="font-size: 75%; vertical-align: 15%;" 
-          href="/{{ paginator.last }}">
+          href="{{ paginator.last }}">
           Dernière page</a>
         </span>
       {% endif %}
