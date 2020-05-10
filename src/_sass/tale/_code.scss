@@ -1,14 +1,15 @@
 pre,
 code {
+  background: $grey-3 !important;
+  background-color: $grey-3 !important;
+  color: $code-color !important;
   font-family: $monospaced;  
 }
 
 code {
-  background-color: $grey-3;
   border-radius: 3px;
-  color: $code-color;
   font-size: 95%;
-  padding: .25em .5em;
+  padding: .15em .20em .10em .20em;
 }
 
 pre {
@@ -19,14 +20,16 @@ pre {
 }
 
 pre code {
-  background-color: transparent;
-  color: inherit;
   font-size: 95%;
   padding: 0;
 }
 
+pre span {
+   background-color: transparent !important;
+}
+
 .highlight {
-  background-color: $grey-3;
+  //background-color: $grey-3;
   border-radius: 3px;
   line-height: 1.4;
   margin: 0 0 1rem;
@@ -37,13 +40,13 @@ pre code {
     overflow-x: auto;
   }
 
-  .lineno {
-    color: $default-tint;
-    display: inline-block; // Ensures the null space also isn't selectable
-    padding: 0 .75rem 0 .25rem;
-    // Make sure numbers aren't selectable
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
-  }
+  // .lineno {
+  //   color: $default-tint;
+  //   display: inline-block; // Ensures the null space also isn't selectable
+  //   padding: 0 .75rem 0 .25rem;
+  //   // Make sure numbers aren't selectable
+  //   -webkit-user-select: none;
+  //      -moz-user-select: none;
+  //           user-select: none;
+  // }
 }

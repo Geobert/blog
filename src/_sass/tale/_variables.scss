@@ -1,21 +1,22 @@
 // Colors
-$background-color: #1e1e1e;
+$background-color: #2c2c2c;
 $default-color: #d8d8d8;
 $default-shade: #cbced4;
-$default-tint: #979797;
+$default-tint: #979797; 
 $grey-1: #afafaf;
 $grey-2: #e5e5e5;
-$grey-3: #2d2d2d;
+$grey-3: #202020;
+$grey-4: #bbbbbb;
 $white: #fff;
-$shadow-color: rgba(255, 255, 255, 0.3);
+$shadow-color: rgba(255, 255, 255, 0.4);
 $highlight: #ffee00;
-$code-color: $highlight;
+$code-color: $grey-4;
 
 // Fonts
 $serif-primary: 'PT Serif', serif;
 $serif-secondary: 'PT Serif', Palatino, 'Palatino LT STD', 'Palatino Linotype', 'Book Antiqua', 'Georgia', serif;
 $sans-serif: 'Inconsolata', 'Segoe UI', Helvetica, Arial, sans-serif;
-$monospaced: Menlo, Monaco, monospace;
+$monospaced:  Consolas, Menlo, Monaco, monospace;
 
 @mixin box-sizing($type: border-box) {
   -webkit-box-sizing: $type;

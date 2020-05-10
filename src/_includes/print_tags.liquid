@@ -1,3 +1,4 @@
-{% for tag in page.tags %}
+{% assign all_tags = page.tags | sort %}
+{% for tag in all_tags %}
 <a href="/tags/{{ tag | slugify: "latin" }}" class="tag">{{ tag }}</a>{% if forloop.index != forloop.length %}, {% endif %}
 {% endfor %}
