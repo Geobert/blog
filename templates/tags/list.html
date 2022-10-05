@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ config.title }} • {{ taxonomy.name }}{% endblock title %}
+{% block content %}
+<h1>Tags</h1>
+<p style="margin-top: 2em;">
+  {% set all_tags = terms | sort(attribute="slug") %}
+  {% for ptag in all_tags %}
+  <span class="site-tag">
+  {% set nb_pages = ptag.pages | length %}
+  <a href="{{ ptag.permalink }}" style="font-size: {{ nb_pages * 4 + 80 }}%">{{ ptag.name }} ({{ ptag.pages | length }})</a>
+</span>
+    {% endfor %}
+  </p>
+{% endblock content %}

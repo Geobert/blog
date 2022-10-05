@@ -1,5 +1,5 @@
 # About
 
-Template and CSS of my blog which is powered by [Antimoine](https://github.com/antimoine-org/antimoine)
+Template and CSS of my blog which is powered by [Zola](https://getzola.org/)
 
 

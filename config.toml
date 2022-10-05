@@ -1,0 +1,21 @@
+base_url = "https://haurchefant.fr"
+
+title = "Geob-o-matic"
+description = "Faire réfléchir la machine qui est en moi"
+
+compile_sass = true
+generate_rss = true 
+feed_filename = "rss.xml"
+
+highlight_code = true
+build_search_index = false
+
+default_language = "fr"
+
+taxonomies = [{name = "tags", paginate_by = 20}]
+
+[extra]
+# Put all your custom variables here
+copyright = "2022"
+author = "Geobert Quach"
+
